@@ -115,10 +115,13 @@ function taiowc_register_blocks() {
   
    function taiowc_blocks_render_callback( $attr ) {
   
-   if ( function_exists( 'get_current_screen' ) && get_current_screen()->is_block_editor() ) {
-      return;
-   } 
-   $taiowBlockStyle = '';
+   $screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+   if ( $screen && method_exists( $screen, 'is_block_editor' ) && $screen->is_block_editor() ) {
+        return;
+    }
+ 
+
+    $taiowBlockStyle = '';
     $paddingUnit = isset($attr['paddingUnit']) ? $attr['paddingUnit'] : 'px';
     $marginUnit = isset($attr['marginUnit']) ? $attr['marginUnit'] : 'px';
     
@@ -357,7 +360,7 @@ function taiowc_register_blocks() {
     }
     
     $countPosition    = isset($attr['countPosition']) ? $attr['countPosition'] : 'left';
-    $taiowBlockStyle = preg_replace('/\s+/', ' ', trim($taiowBlockStyle));
+    $taiowBlockStyle  = preg_replace('/\s+/', ' ', trim($taiowBlockStyle));
      
     $block_content = '<div id="wp-block-taiowc-' . esc_attr($attr['uniqueID']) . '"  class="wp-block-taiowc ' . esc_attr($taiowcPriceShow) . ' ' . esc_attr($taiowcCountShow) . '  '.esc_attr($countPosition).'" style="'.esc_attr($taiowBlockStyle).'">';
     
@@ -368,4 +371,3 @@ function taiowc_register_blocks() {
     return $block_content;
     
   }
-  
