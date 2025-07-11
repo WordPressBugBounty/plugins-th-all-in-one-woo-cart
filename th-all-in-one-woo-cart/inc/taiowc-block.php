@@ -21,11 +21,12 @@ function taiowc_register_blocks() {
     foreach ( $blocks as $block ) {
         // Register JavaScript file
         wp_register_script(
-            $block['script_handle'],
-            TAIOWC_PLUGIN_URI . 'build/' . $block['script_handle'] . '.js',
-            array( 'wp-blocks', 'wp-element', 'wp-editor' ),
-            filemtime( TAIOWC_PLUGIN_PATH . '/build/' . $block['script_handle'] . '.js' )
-        );
+        $block['script_handle'],
+        TAIOWC_PLUGIN_URI . 'build/' . $block['script_handle'] . '.js',
+        array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+        filemtime( TAIOWC_PLUGIN_PATH . '/build/' . $block['script_handle'] . '.js' ),
+        array( 'strategy' => 'defer' )
+       );
   
         // Register editor style
         wp_register_style(
@@ -79,7 +80,7 @@ function taiowc_register_blocks() {
         [
             [
                 'slug'  => 'vayu-blocks',
-                'title' => __( 'ThemeHunk', 'taiowc' ),
+                'title' => __( 'ThemeHunk', 'th-all-in-one-woo-cart' ),
             ],
         ],
         $categories
@@ -102,7 +103,7 @@ function taiowc_register_blocks() {
    }
    
     wp_enqueue_style(
-        'taiowc-th-icon-css',
+        'th-icon-css',
         TAIOWC_PLUGIN_URI . 'th-icon/style.css',
         array(),
         TAIOWC_VERSION
