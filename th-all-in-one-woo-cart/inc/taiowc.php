@@ -59,7 +59,7 @@ if ( ! class_exists( 'Taiowc' ) ):
 
                 add_action('taiowc_cart_show_icon',array( $this,'taiowc_cart_icon'));
 
-                add_action( 'wp_footer', array( $this, 'addcartBody' ) );
+                add_action( 'wp_footer', array( $this, 'addcartBody' ),99 );
 
                 add_action( 'taiowc_mini_cart', array( $this, 'taiowc_mini_cart_content' ) );
 
@@ -133,14 +133,13 @@ if ( ! class_exists( 'Taiowc' ) ):
             }
 
             // Register styles
-            wp_register_style( 'taiowc-style', TAIOWC_PLUGIN_URI . 'assets/css/style.css', array(), TAIOWC_VERSION );
-            wp_register_style( 'owl.carousel-style', TAIOWC_PLUGIN_URI . 'assets/css/owl.carousel.css', array(), TAIOWC_VERSION );
+            wp_register_style( 'taiowc-style', TAIOWC_PLUGIN_URI . 'assets/css/style.css', array(), '' );
             wp_register_style( 'th-icon-css', TAIOWC_PLUGIN_URI . 'th-icon/style.css', array(), TAIOWC_VERSION );
 
             // Enqueue styles
             wp_enqueue_style( 'taiowc-style' );
-            wp_enqueue_style( 'owl.carousel-style' );
             wp_enqueue_style( 'th-icon-css' );
+            wp_enqueue_style('dashicons');
 
             // Add inline styles
             wp_add_inline_style( 'taiowc-style', taiowc_style() );
@@ -149,13 +148,9 @@ if ( ! class_exists( 'Taiowc' ) ):
             wp_register_script( 'taiowc-cart-script', TAIOWC_PLUGIN_URI . 'assets/js/taiowc-cart.js', array( 'jquery' ), TAIOWC_VERSION, array( 
                 'strategy'  => 'defer',
             ) );
-            wp_register_script( 'owl.carousel-script', TAIOWC_PLUGIN_URI . 'assets/js/owl.carousel.js', array( 'jquery' ), TAIOWC_VERSION, array( 
-                'strategy'  => 'defer',
-            ) );
 
             // Enqueue scripts
             wp_enqueue_script( 'taiowc-cart-script' );
-            wp_enqueue_script( 'owl.carousel-script' );
 
             // WooCommerce cart fragments (if required for AJAX cart updates)
             wp_enqueue_script( 'wc-cart-fragments' );
@@ -249,7 +244,7 @@ if ( ! class_exists( 'Taiowc' ) ):
 
               if($icon_svg=='icon-1'){?>
                  
-                 <span class="th-icon th-icon-Shopping_icons-01"></span>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
 
               <?php }        
 

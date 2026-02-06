@@ -1,10 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 .taiowc-cart-item,.taiowc-icon,.taiowc-total{
 display:flex;
 align-items: center;
 justify-content: center;
 }
-.taiowc-cart-item{
-  padding: 0.6rem;
+.taiowc-wrap .taiowc-cart-item{
   background: transparent;
   border-radius: 3px;
 }
@@ -15,25 +17,55 @@ justify-content: center;
 position:relative;
 padding: 0;
 margin: 0;
+display: flex;
 }
 .taiowc-content,
 .taiowc-cart-close{
 text-decoration: none!important;
 }
-.cart-count-item{
-position: absolute;
+.taiowc-wrap .cart-count-item{
+     position: absolute;
     background: #111;
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
     color: #fff;
-    text-align: center;
-    font-size: 0.9rem;
-    border-radius: 100%;
-    top: -18px;
-    left:-18px;
+    line-height: 1;
+    left: 12px;
+    top: -10px;
+    font-size: 0.65rem;
+    padding: 0;
+    border-radius: 9999px;
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #FFFFFF;
     z-index: 1;
+    font-weight: 700;
 }
+
+.taiowc-wrap.cart_fixed_1 .cart-count-item{
+    left: -5px;
+    top: -7px;
+}
+/*.cart-count-item{
+    position: absolute;
+    right: initial;
+    line-height: 1rem;
+    left: 14px;
+    top: -7px;
+    background: #999;
+    font-size: 0.65rem;
+    padding: 0;
+    border-radius: 9999px;
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    box-shadow: 0 0 0 2px #FFFFFF;
+
+}*/
 .taiowc-content .taiowc-total{
 margin-left:0.3rem;
 font-size:0.89rem;
@@ -426,14 +458,16 @@ box-shadow: -4px 2px 6px #dddddd1a;
 
 
 .cart_fixed_1 .taiowc-cart-item {
-    padding: 0.7rem;
-    background: #fff;
-   border-radius: 10px!important;
-   box-shadow: 0 0 10px rgb(183 183 183 / 60%);
-    -moz-box-shadow: 0 0 10px rgb(183 183 183 / 60%);
-    -webkit-box-shadow: 0 0 10px rgb(183 183 183 / 60%);
-    -o-box-shadow: 0 0 10px rgb(183 183 183 / 60%);
-
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.44);
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+}
+.cart_fixed_1 .taiowc-icon .th-icon {
+    font-size: 2rem;
 }
 
 .cart_fixed_1 .taiowc-cart-item .taiowc-total{
@@ -569,6 +603,9 @@ position: fixed;
 .cart_fixed_2 .cart-heading h4{
 display:none;
 }
+.taiowc-content:focus{
+    outline:none!important;
+}
 /*cart button*/
 .taiowc .cart-button .buttons a{
     background: #000!important;
@@ -622,7 +659,6 @@ font-weight: bold;
     display:none;
 }
 .quantity-decrement, .quantity-increment {
-
     cursor: pointer;
     border: 1px solid #eee;
     background-color:transparent;
@@ -631,7 +667,8 @@ font-weight: bold;
     height:25px;
     line-height:25px;
     width:25px;
-
+    padding: 0;
+    color: #444;
 }
 .quantity-decrement:focus,
 .quantity-increment:focus {
@@ -647,6 +684,8 @@ font-weight: bold;
 
 .quantity-decrement:hover, .quantity-increment:hover {
     background-color: #eee;
+    outline: none; /* Removes the default outline when the button is active */
+    box-shadow: none;
 }
 .taiowc input[type=number].taiowc-quantity {
     width: 30px;

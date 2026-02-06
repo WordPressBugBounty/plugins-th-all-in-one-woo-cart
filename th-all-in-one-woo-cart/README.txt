@@ -3,8 +3,8 @@ Contributors: ThemeHunk,satyendra61
 Author URI: : https://www.themehunk.com/
 Tags: cart, floating cart,ajax cart,advance cart
 Requires at least: 5.5
-Tested up to: 6.8
-Stable tag: 2.1.0
+Tested up to: 6.9
+Stable tag: 2.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires Plugins: woocommerce
@@ -140,6 +140,23 @@ Yes, You can translate our plugin to desired language.
 == Screenshots ==
 
 == Changelog ==
+
+= Version 2.2.4 =
+* Update : Required classes added in fixed cart and other html.
+* Update: Style improved.
+
+= Version 2.2.3 =
+* Update : Style updated.
+
+= Version 2.2.2 =
+* Update : Default Icon changed.
+
+= Version 2.2.1 =
+* Fixed : cart model open issue fix.
+* Update : Themehunk Plugins page style improved.
+
+= Version 2.2.0 =
+* Fixed : Multiple cart model showing issue fix.
 
 = Version 2.1.0 =
 * Fixed : Security issue fixed.
