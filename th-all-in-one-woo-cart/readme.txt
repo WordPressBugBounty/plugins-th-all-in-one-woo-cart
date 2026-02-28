@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: Cart for WooCommerce, floating cart, ajax cart, side cart, shopping cart
 Requires at least: 5.5
 Tested up to: 6.9
-Stable tag: 2.2.6
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires Plugins: woocommerce
@@ -105,11 +105,18 @@ These plugin have been tested and are compatible with all WordPress themes witho
 * [Blocksy](https://wordpress.org/themes/blocksy/) – by creativethemeshq
 
 == Screenshots ==
-1. Dashboard
-2. Cart Icon
-3. Cart Layouts
-4. Color Design
-5. Cart Product Design
+1. Cart Setting
+2. Shrotcode
+3. Forntend Cart Layouts
+4. Frontend Mobile View
+5. Side Cart Style Pro
+6. Mobile Cart Style Pro
+7. Cart Analytics Pro
+
+
+License for images:
+product-1.png,product-2.png,product-3.png,product-4.png are made with SORA AI.
+https://sora.chatgpt.com/explore
 
 == Installation ==
 
@@ -149,7 +156,26 @@ Yes, You can translate our plugin to desired language.
 == Screenshots ==
 
 == Changelog ==
+
+= Version 2.3.0 =
+
+* New: Brand-New Admin UI – A completely redesigned, modern, and user-friendly interface for a better management experience.
+* New: Live Cart Preview – Instantly see how your cart settings look and behave in real time. No more guesswork!
+* New: Sticky Bottom Cart Design – Enhanced front-end experience with a sleek sticky bottom cart layout that keeps checkout within reach.
+* New: Enhanced Security – Strengthened security measures to ensure safer and more reliable performance.
+* New: Resolved various styling issues for a more consistent appearance.
+* New:Optimized and improved overall code performance and stability.
+* Update:Removed the Cart Title from the Fixed Cart 2 style for a cleaner layout.
+
+
+= Version 2.2.7 =
+* Update: Premium tab features showing as a demo included.
+* Update: Front Style modified.
+
 = Version 2.2.6 =
+* Update: Readme updated.
+
+= Version 2.2.5 =
 * Fix : Shop mania theme issue fixed
 * Update: Style improved.
 
