@@ -1,21 +1,26 @@
-=== All In One Advance Cart ===
+=== Advance Side Cart, Ajax Cart & Floating Cart for WooCommerce   ===
 Contributors: ThemeHunk,satyendra61
 Author URI: : https://www.themehunk.com/
-Tags: cart, floating cart,ajax cart,advance cart
+Tags: Cart for WooCommerce, floating cart, ajax cart, side cart, shopping cart
 Requires at least: 5.5
 Tested up to: 6.9
-Stable tag: 2.2.4
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires Plugins: woocommerce
 
-All in One Ajax Floating Add to Cart Plugin for WooCommerce. Powerful & Easy to use custom advance Sliding Cart plugin.
+Enhance your Cart for WooCommerce with a modern side cart and floating cart. Improve shopping experience with a fast, Ajax-powered shopping cart.
 
 == Description ==
 
-TH All In One advacne Cart is a perfect choice to display Cart on your website and improve your potential customer’s buying experience. This WooCommerce Cart plugin will add Floating Cart in your website. Customers can update or remove products from the cart without reloading the cart continuously. It is a fully Responsive, mobile friendly plugin and supports many advanced features. You can use this Woo Cart Plugin on any WooCommerce Theme.
+TH All In One Woo Cart is a powerful Cart for WooCommerce plugin that improves the default shopping cart experience by adding a modern side cart, floating cart, and Ajax-powered cart features.
 
-[Docs](https://themehunk.com/docs/th-all-in-one-woo-cart/) | [More Details](https://themehunk.com/th-all-in-one-woo-cart/) | [support](https://themehunk.com/contact-us/).
+This plugin helps customers view and manage their cart without leaving the current page, resulting in faster checkout and a better shopping experience.
+
+This WooCommerce Shopping Cart is a perfect choice to display Cart on your website and improve your potential customer’s buying experience. This Cart for WooCommerce plugin will add Floating Cart in your website. Customers can update or remove products from the cart without reloading the cart continuously. It is a fully Responsive, mobile friendly plugin and supports many advanced features. You can use this Woo Cart Plugin on any WooCommerce Theme.
+
+[Live Demo](https://wpthemes.themehunk.com/woo-cart-pro/) | [Docs](https://themehunk.com/docs/th-all-in-one-woo-cart/) | [More Details](https://themehunk.com/th-all-in-one-woo-cart/) | [support](https://themehunk.com/contact-us/).
+
 
 https://www.youtube.com/watch?v=b5Rj9Xyv1-8
 
@@ -24,6 +29,9 @@ https://www.youtube.com/watch?v=b5Rj9Xyv1-8
 
 ⭐ Cart Integration Using Shortcode
 ⭐ Cart Integration Using PHP code
+⭐ Side Cart for WooCommerce
+⭐ Floating Cart Button
+⭐ Ajax Cart for WooCommerce
 ⭐ Slide Right Cart Open Style
 ⭐ Hide Cart from Pages
 ⭐ Auto Open with Ajax
@@ -34,6 +42,7 @@ https://www.youtube.com/watch?v=b5Rj9Xyv1-8
 
 
 **Pro Features:-**
+
 ⭐ Header Menu Integration
 ⭐ Cart Analytics
 ⭐ Show and Hide Cart
@@ -69,31 +78,31 @@ https://www.youtube.com/watch?v=b5Rj9Xyv1-8
 
 **Theme Compatibility:-**
 
-These themes have been tested and are compatible with search plugin without significant issues. Also you can use this plugin to your Block, Elementor, WooCommerce Pages:
+These plugin have been tested and are compatible with all WordPress themes without significant issues. Also you can use this plugin to your Block, Elementor, WooCommerce Pages:
 
-* [Shop Mania](https://wordpress.org/themes/th-shop-mania/) - by ThemeHunk
-* [Top Store](https://wordpress.org/themes/top-store/) - by ThemeHunk
-* [Open Shop](https://wordpress.org/themes/open-shop/) - by ThemeHunk
-* [Zita](https://wordpress.org/themes/zita/) - by ThemeHunk
-* [Big Store](https://wordpress.org/themes/big-store/) - by ThemeHunk
-* [M Shop](https://wordpress.org/themes/m-shop/) - by ThemeHunk
-* [Royal Shop](https://wordpress.org/themes/royal-shop/) - by ThemeHunk
-* [Open Mart](https://wordpress.org/themes/open-mart/) - by ThemeHunk
-* [GoGo](https://wordpress.org/themes/gogo/) - by ThemeHunk
-* [Twenty Twenty-Two](https://wordpress.org/themes/twentytwentytwo/) - by WordPress.org
-* [Hello Elementor](https://wordpress.org/themes/hello-elementor/) - by Elementor
-* [OceanWP](https://wordpress.org/themes/oceanwp/) - by oceanwp
-* [Neve](https://wordpress.org/themes/neve/) - by Themeisle
-* [Go](https://wordpress.org/themes/go/) - by GoDaddy
-* [GeneratePress](https://wordpress.org/themes/generatepress/) - by Tom
-* [Hestia](https://wordpress.org/themes/hestia/) - by Themeisle
-* [Colibri WP](https://wordpress.org/themes/colibri-wp/) - by Extend Themes
-* [Kadence](https://wordpress.org/themes/kadence/) - by Ben Ritner – Kadence WP
-* [Astra](https://wordpress.org/themes/astra/) - by Brainstorm Force
-* [Kubio](https://wordpress.org/themes/kubio/) - by Extend Themes
-* [Zakra](https://wordpress.org/themes/zakra/) - by ThemeGrill
-* [Storefront](https://wordpress.org/themes/storefront/) - by Automattic
-* [Blocksy](https://wordpress.org/themes/blocksy/) - by creativethemeshq
+* [Shop Mania](https://wordpress.org/themes/th-shop-mania/) – by ThemeHunk
+* [Top Store](https://wordpress.org/themes/top-store/) – by ThemeHunk
+* [Open Shop](https://wordpress.org/themes/open-shop/) – by ThemeHunk
+* [Zita](https://wordpress.org/themes/zita/) – by ThemeHunk
+* [Big Store](https://wordpress.org/themes/big-store/) – by ThemeHunk
+* [M Shop](https://wordpress.org/themes/m-shop/) – by ThemeHunk
+* [Royal Shop](https://wordpress.org/themes/royal-shop/) – by ThemeHunk
+* [Open Mart](https://wordpress.org/themes/open-mart/) – by ThemeHunk
+* [GoGo](https://wordpress.org/themes/gogo/) – by ThemeHunk
+* [Twenty Twenty-Two](https://wordpress.org/themes/twentytwentytwo/) – by WordPress.org
+* [Hello Elementor](https://wordpress.org/themes/hello-elementor/) – by Elementor
+* [OceanWP](https://wordpress.org/themes/oceanwp/) – by oceanwp
+* [Neve](https://wordpress.org/themes/neve/) – by Themeisle
+* [Go](https://wordpress.org/themes/go/) – by GoDaddy
+* [GeneratePress](https://wordpress.org/themes/generatepress/) – by Tom
+* [Hestia](https://wordpress.org/themes/hestia/) – by Themeisle
+* [Colibri WP](https://wordpress.org/themes/colibri-wp/) – by Extend Themes
+* [Kadence](https://wordpress.org/themes/kadence/) – by Ben Ritner – Kadence WP
+* [Astra](https://wordpress.org/themes/astra/) – by Brainstorm Force
+* [Kubio](https://wordpress.org/themes/kubio/) – by Extend Themes
+* [Zakra](https://wordpress.org/themes/zakra/) – by ThemeGrill
+* [Storefront](https://wordpress.org/themes/storefront/) – by Automattic
+* [Blocksy](https://wordpress.org/themes/blocksy/) – by creativethemeshq
 
 == Screenshots ==
 1. Dashboard
@@ -101,6 +110,10 @@ These themes have been tested and are compatible with search plugin without sign
 3. Cart Layouts
 4. Color Design
 5. Cart Product Design
+
+License for images:
+product-1.png,product-2.png,product-3.png,product-4.png are made with SORA AI.
+https://sora.chatgpt.com/explore
 
 == Installation ==
 
@@ -140,6 +153,32 @@ Yes, You can translate our plugin to desired language.
 == Screenshots ==
 
 == Changelog ==
+
+= Version 2.3.1 =
+* Update:cart and checkout button loader added.
+* Update: Powered by think updated.
+* Update: Feedback added.
+
+= Version 2.3.0 =
+* New: Brand-New Admin UI – A completely redesigned, modern, and user-friendly interface for a better management experience.
+* New: Live Cart Preview – Instantly see how your cart settings look and behave in real time. No more guesswork!
+* New: Sticky Bottom Cart Design – Enhanced front-end experience with a sleek sticky bottom cart layout that keeps checkout within reach.
+* New: Enhanced Security – Strengthened security measures to ensure safer and more reliable performance.
+* New: Resolved various styling issues for a more consistent appearance.
+* New:Optimized and improved overall code performance and stability.
+* Update:Removed the Cart Title from the Fixed Cart 2 style for a cleaner layout.
+
+
+= Version 2.2.7 =
+* Update: Premium tab features showing as a demo included.
+* Update: Front Style modified.
+
+= Version 2.2.6 =
+* Update: Readme updated.
+
+= Version 2.2.5 =
+* Fix : Shop mania theme issue fixed
+* Update: Style improved.
 
 = Version 2.2.4 =
 * Update : Required classes added in fixed cart and other html.
