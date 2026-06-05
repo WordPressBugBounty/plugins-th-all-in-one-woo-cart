@@ -98,15 +98,45 @@ if ( ! class_exists( 'Taiowc_Cart_Fragment' ) ):
 
      public function taiowc_cart_mini_cart_product($fragments){
         ob_start();
+
+        if ( WC()->cart ) {
+
+            WC()->cart->calculate_totals();
+
+            WC()->shipping()->calculate_shipping(
+                WC()->cart->get_shipping_packages()
+            );
+        }
+
         ?>
         
         <div class="taiowc-cart-model-body">
-                        
-        <?php 
+              <?php 
 
-        do_action('taiowc_mini_cart'); 
+                $taiowc_show_free_shipping_bar =
+                taiowc_main()->taiowc_get_option(
+                    'taiowc-show_free_shipping_bar'
+                );
+
+                $taiowc_free_shipping_style_type =
+                 taiowc_main()->taiowc_get_option(
+                    'taiowc_free_shipping_style_type'
+                );
+
+            if ( $taiowc_show_free_shipping_bar == true ) {
+
+                taiowc_markup_pro()->taiowc_free_shipping_bar();
+            }
+
+            // if ( taiowc_main()->taiowc_get_option( 'taiowc-show_free_shipping_bar' ) == true ) {
+            //     taiowc_markup_pro()->taiowc_milestones_bar();
+            // }
+
+        do_action('taiowc_mini_cart');
 
         taiowc_markup_pro()->taiowc_get_suggest_product();
+
+        taiowc_markup_pro()->taiowc_cart_total(); 
 
         ?>
 

@@ -50,7 +50,8 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
                 require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc-markup.php';
                 require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc-cart-fragment.php';
                 require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc-style.php';
-                
+                require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc-milestone-rewards.php';
+
         }
 
         public function taiowc_hooks() {
@@ -168,7 +169,7 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
 
         public function taiowc_scripts(){
 
-              wp_enqueue_style( 'taiowc-style', TAIOWC_PLUGIN_URI. '/assets/css/taiowc-style.css', array(), '1.1.3' );
+              wp_enqueue_style( 'taiowc-style', TAIOWC_PLUGIN_URI. '/assets/css/taiowc-style.css', array(), TAIOWC_VERSION );
 
               wp_enqueue_style( 'taiowc-owl.carousel-style', TAIOWC_PLUGIN_URI. '/assets/css/owl.carousel.css', array(), TAIOWC_VERSION );
 
@@ -284,7 +285,7 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
 
                 if($iconstyle=='icon-1'){ ?>
                  
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
       
                     <?php }elseif($iconstyle=='icon-2'){?>
       
@@ -292,11 +293,11 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
                      
                     <?php }elseif($iconstyle=='icon-3'){?>
       
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.153 4L6.01 15.146a.993.993 0 0 0 .327.603.997.997 0 0 0 .679.251H18a1 1 0 0 0 .949-.684l3-9A1 1 0 0 0 21 5H6.347L5.99 2.85a.993.993 0 0 0-.357-.625A.998.998 0 0 0 4.984 2H3a1 1 0 0 0 0 2h1.153zm3.694 10L6.68 7h12.933l-2.334 7H7.847zM10 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm9 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"></path></svg>
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.153 4L6.01 15.146a.993.993 0 0 0 .327.603.997.997 0 0 0 .679.251H18a1 1 0 0 0 .949-.684l3-9A1 1 0 0 0 21 5H6.347L5.99 2.85a.993.993 0 0 0-.357-.625A.998.998 0 0 0 4.984 2H3a1 1 0 0 0 0 2h1.153zm3.694 10L6.68 7h12.933l-2.334 7H7.847zM10 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm9 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"></path></svg>
       
                     <?php }elseif($iconstyle=='icon-4'){?>
       
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20V22H4V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                   <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20V22H4V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
       
                     <?php }elseif($iconstyle=='icon-5'){?>
       
@@ -304,7 +305,7 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
       
                    <?php }elseif($iconstyle=='icon-6'){ ?>
       
-                   <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"></path></svg>
+                   <svg fill="currentColor" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"></path></svg>
                       
                    <?php }elseif($iconstyle=='icon-7'){?>
       
@@ -320,7 +321,7 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
                
               if( $icon_svg=='icon-1' ){ ?>
                  
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 stroke-[1.5px]" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
 
               <?php }elseif($icon_svg=='icon-2'){?>
 
@@ -328,11 +329,11 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
                
               <?php }elseif($icon_svg=='icon-3'){?>
 
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.153 4L6.01 15.146a.993.993 0 0 0 .327.603.997.997 0 0 0 .679.251H18a1 1 0 0 0 .949-.684l3-9A1 1 0 0 0 21 5H6.347L5.99 2.85a.993.993 0 0 0-.357-.625A.998.998 0 0 0 4.984 2H3a1 1 0 0 0 0 2h1.153zm3.694 10L6.68 7h12.933l-2.334 7H7.847zM10 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm9 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"></path></svg>
+             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.153 4L6.01 15.146a.993.993 0 0 0 .327.603.997.997 0 0 0 .679.251H18a1 1 0 0 0 .949-.684l3-9A1 1 0 0 0 21 5H6.347L5.99 2.85a.993.993 0 0 0-.357-.625A.998.998 0 0 0 4.984 2H3a1 1 0 0 0 0 2h1.153zm3.694 10L6.68 7h12.933l-2.334 7H7.847zM10 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm9 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" fill="currentColor"></path></svg>
 
               <?php }elseif($icon_svg=='icon-4'){?>
 
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20V22H4V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20V22H4V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
 
               <?php }elseif($icon_svg=='icon-5'){?>
 
@@ -340,7 +341,7 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
 
              <?php }elseif($icon_svg=='icon-6'){ ?>
 
-             <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"></path></svg>
+             <svg fill="currentColor" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"></path></svg>
                 
              <?php }elseif($icon_svg=='icon-8'){ ?>
 
@@ -468,7 +469,40 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
 
                 $thumbnail         = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-                $product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+                // $product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+
+
+                // $live_price = $cart_item['data']->get_price(); 
+              
+
+                // $product_price = apply_filters( 'woocommerce_cart_item_price', wc_price( $live_price ), $cart_item, $cart_item_key );
+
+                $saved_text = '';
+                    $saved_amount = '';
+
+                    $regular_price = $cart_item['data']->get_regular_price();
+                    $live_price    = $cart_item['data']->get_price();
+
+                    if ( $regular_price && $regular_price > $live_price ) {
+
+                        $saved_amount = $regular_price - $live_price;
+                        $discount_percentage = round( ( ( $regular_price - $live_price ) / $regular_price ) * 100 );
+
+                        $product_price = '<del>' . wc_price( $regular_price ) . '</del> ';
+                        $product_price .= '<ins>' . wc_price( $live_price ) . '</ins>';
+
+                    } else {
+
+                        $product_price = wc_price( $live_price );
+
+                    }
+
+                    $product_price = apply_filters(
+                        'woocommerce_cart_item_price',
+                        $product_price,
+                        $cart_item,
+                        $cart_item_key
+                    );
 
                 $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 
@@ -575,6 +609,12 @@ if ( ! class_exists( 'Taiowc_Main' ) ):
                      ?>
 
                      <?php if(taiowc_main()->taiowc_get_option( 'taiowc-show_prd_quantity' ) || taiowc_main()->taiowc_get_option( 'taiowc-show_prd_price' ) == true){ ?>
+
+                    <div class="taiowc-saved-wrap">
+                        <span class="taiowc-saved-label"><?php esc_html_e('You Saved','taiowc'); ?> </span>
+                        
+                        <span class="taiowc-saved-percent"><?php echo esc_html( $discount_percentage); ?>%</span>
+                    </div>
 
                   <div class="item-product-quantity">
                     <?php 
