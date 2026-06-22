@@ -4,7 +4,7 @@ Author URI: : https://www.themehunk.com/
 Tags: Cart for WooCommerce, floating cart, ajax cart, side cart, shipping Bar
 Requires at least: 5.5
 Tested up to: 7.0
-Stable tag: 2.3.3
+Stable tag: 2.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires Plugins: woocommerce
@@ -167,6 +167,17 @@ Yes, You can translate our plugin to desired language.
 
 == Changelog ==
 
+= Version 2.3.4 =
+Update: Sidebar cart style and design improvements.
+Update: Shipping bar design enhancements.
+Fix: Resolved discount calculation issue.
+Update: Cart modal body padding top added.
+Update: Related product title bg color modified.
+Update: Related Product Slider improved.
+
+* Update: COUPON SETTINGS (Pro),Payment Settings (Pro),PRODUCTS YOU MAY ALSO LIKE (Pro),Footer Text made allowed for pro users.
+
+
 = Version 2.3.3 =
 * Update: Modal layout modified.
 * Update: Shipping bar and Milestone integrated.
@@ -179,6 +190,7 @@ Yes, You can translate our plugin to desired language.
 * Update: Bundle pricing and other style issue resolved.
 * Update: Discount percent added. 
 * Update: Regular price added.
+* Update: Activation woo cart pro conflict issue resolved.
 
 = Version 2.3.2 =
 * Update: Powered by link updated.

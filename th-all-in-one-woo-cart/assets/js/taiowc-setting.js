@@ -1281,6 +1281,7 @@ $(document).on('click', '.taiowc-remove-image', function (e) {
 });
 
 $('#taiowc_mobile_cart input,#taiowc_mobile_cart select').attr("disabled", true);
+// $('#taiowc-not_showing_page-field,#taiowc_carttaiowc_cart-section-1 input,#taiowc-choose_prdct_like-field,#taiowc_carttaiowc_cart-section-2 input,#taiowc_carttaiowc_cart-section-3 input,#taiowc_carttaiowc_cart-section-4 input').attr("disabled", true);
 
 
         },

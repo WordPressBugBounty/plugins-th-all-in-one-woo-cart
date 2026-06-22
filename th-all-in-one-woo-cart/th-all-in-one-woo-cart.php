@@ -4,7 +4,7 @@
  * Requires Plugins:        woocommerce
  * Plugin URI:              https://themehunk.com/th-all-in-one-woo-cart/
  * Description:             TH All In One Woo Cart is a perfect choice to display Cart on your website and improve your potential customer’s buying experience. This plugin will add Floating Cart in your website.  Customers can update or remove products from the cart without reloading the cart continuously. It is a fully Responsive, mobile friendly plugin and supports many advanced features.
- * Version:                 2.3.3
+ * Version:                 2.3.4
  * Author:                  ThemeHunk
  * License:                 GPL-2.0+
  * License URI:             http://www.gnu.org/licenses/gpl-2.0.txt
@@ -12,13 +12,15 @@
  * Requires at least:       5.5
  * Tested up to:            7.0
  * WC requires at least:    3.2
- * WC tested up to:         9.9
+ * WC tested up to:         10.8
  * Domain Path:             /languages
  * Text Domain:             th-all-in-one-woo-cart
  * Tags: floating cart,ajax,cart,woocommerce,advance cart,slider
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+
 
 if (!defined('TAIOWC_PLUGIN_FILE')) {
     define('TAIOWC_PLUGIN_FILE', __FILE__);
@@ -51,7 +53,6 @@ $plugin_data = get_file_data(__FILE__, array('version' => 'Version'), false);
 define('TAIOWC_VERSION', $plugin_data['version']);
 
 } 
-
 /**
  * Declare the woo HPOS compatibility.
 */
@@ -62,6 +63,7 @@ function taiowc_hpos_compatibility() {
 }
 add_action( 'before_woocommerce_init', 'taiowc_hpos_compatibility');
 
+if (!defined( 'TAIOWCP_VERSION' ) ){
 require_once TAIOWC_PLUGIN_PATH . 'inc/taiowc-block.php';
 require_once TAIOWC_PLUGIN_PATH . 'inc/themehunk-menu/admin-menu.php';
 require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc-option.php';
@@ -74,3 +76,30 @@ require_once TAIOWC_PLUGIN_PATH . '/inc/taiowc.php';
 // register_activation_hook( __FILE__, 'taiowc_track_table');
 
     
+/**
+ * Taiowc_deactivate_Plugin
+ */
+
+if (!class_exists('Taiowc_deactivate_Plugin')) {
+
+class Taiowc_deactivate_Plugin{
+    /**
+     * Constructor.
+     */
+    public function __construct(){
+        register_activation_hook( __FILE__, array( $this , 'taiowc_deactivate' ) );  
+    }
+    
+    public function taiowc_deactivate() {
+       require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+       deactivate_plugins( plugin_basename('th-all-in-one-woo-cart-pro/th-all-in-one-woo-cart-pro.php' ) ); 
+    }
+
+    
+}
+
+new Taiowc_deactivate_Plugin(); 
+
+}   
+
+}
