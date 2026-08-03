@@ -205,6 +205,10 @@ if ( ! class_exists( 'Taiowc_Markup_Pro' ) ):
                                 'taiowc_free_shipping_style_type'
                             );
 
+                        $ai_suggestion =  taiowc_main()->taiowc_get_option( 'taiowc-show_ai_suggestion' );
+
+                        $ai_suggestion = (int) $ai_suggestion;
+
                         if ( $taiowc_show_free_shipping_bar == true  ) {
 
                             $this->taiowc_free_shipping_bar();
@@ -218,7 +222,11 @@ if ( ! class_exists( 'Taiowc_Markup_Pro' ) ):
 
                         $this->taiowc_get_suggest_product();
 
-                        $this->taiowc_cart_total(); 
+                    if ( $ai_suggestion  ) {
+                        $this->taiowc_ai_suggest_panel();
+                    }
+
+                        $this->taiowc_cart_total();
 
                         ?>
 
@@ -1572,6 +1580,23 @@ if ( ! class_exists( 'Taiowc_Markup_Pro' ) ):
 
        }
 
+    }
+
+    public function taiowc_ai_suggest_panel() {
+
+        if ( ! WC()->cart || WC()->cart->is_empty() ) {
+            return;
+        }
+
+        ?>
+        <div class="taiowc-ai-suggest-wrap">
+            <button type="button" class="taiowc-ai-suggest-btn">
+                <?php echo taiowc_main()->taiowc_get_option( 'taiowc_ai_heading' ); ?>
+                
+            </button>
+            <div class="taiowc-ai-suggest-result" style="display:none;"></div>
+        </div>
+        <?php
     }
 
     public function taiowc_milestones_bar() {
